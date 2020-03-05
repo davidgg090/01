@@ -14,11 +14,16 @@ class Toy(models.Model):
 
 
     class Meta:
-        """Meta definition for Toy."""
+        """
+            Meta definition for Toy.
+        """
 
         verbose_name = 'Toy'
         verbose_name_plural = 'Toys'
+        ordering = ('name',)
 
     def __str__(self):
-        """Unicode representation of Toy."""
+        """
+            Unicode representation of Toy.
+        """
         return self.name
