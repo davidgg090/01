@@ -9,9 +9,11 @@ class ToySerializer(serializers.Serializer):
     toy_category = serializers.CharField(max_length=200)
     was_included_in_home = serializers.BooleanField(required=False)
 
+    @staticmethod
     def create(self, validated_data):
         return Toy.objects.create(**validated_data)
-        
+     
+    @staticmethod   
     def update(self, instance, validated_data):
         instance.name = validated_data.get('name', instance.name)
         instance.description = validated_data.get('description', instance.description)
