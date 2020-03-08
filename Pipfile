@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 django = "==1.11.28"
-djangorestframework = "==3.6.4"
+djangorestframework = "==3.9.1"
 django-filter = "*"
 
 [requires]
