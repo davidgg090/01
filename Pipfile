@@ -9,6 +9,8 @@ verify_ssl = true
 django = "==1.11.28"
 djangorestframework = ">=3.9.1"
 django-filter = "*"
+pytest = "*"
+pytest-django = "*"
 
 [requires]
 python_version = "3.6"
