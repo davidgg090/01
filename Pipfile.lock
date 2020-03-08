@@ -1,7 +1,9 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e1a895fe87d6d662a3e0d60a6c070dce14b66ead1bee52402ab8b8adf8080a96"
+            dependabot/pip/django-1.11.28
+              "sha256": "f35bd6804c1eb34f4fe9a13e3a8ab610b0eb75c019c4e0dfe8e75a87c825fb15"
+              "sha256": "e1a895fe87d6d662a3e0d60a6c070dce14b66ead1bee52402ab8b8adf8080a96"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -32,11 +34,11 @@
         },
         "django": {
             "hashes": [
-                "sha256:1836878162dfdf865492bacfdff0321e4ee8f1e7d51d93192546000b54982b29",
-                "sha256:89162f70a74aac62a53f975128faba6099a7ef2c9d8140a41ae9d6210bda05cd"
+                "sha256:a3b01cdff845a43830d7ccacff55e0b8ff08305a4cbf894517a686e53ba3ad2d",
+                "sha256:b33ce35f47f745fea6b5aa3cf3f4241069803a3712d423ac748bd673a39741eb"
             ],
             "index": "pypi",
-            "version": "==1.11.5"
+            "version": "==1.11.28"
         },
         "django-filter": {
             "hashes": [
