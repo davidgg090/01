@@ -6,11 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-
-django = "==1.11.5"
-djangorestframework = "==3.11.0"
-
-httpie = "*"
+django = "==1.11.28"
+djangorestframework = "==3.6.4"
 django-filter = "*"
 
 [requires]
