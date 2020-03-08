@@ -23,12 +23,12 @@ def toy_list(request):
     elif request.method == 'POST':
         toy_data = JSONParser().parse(request)
         toy_serializer = ToySerializer(data=toy_data)
-    if toy_serializer.is_valid():
-        toy_serializer.save()
-        return JSONResponse(toy_serializer.data, \
-        status=status.HTTP_201_CREATED)
-    return JSONResponse(toy_serializer.errors, \
-    status=status.HTTP_400_BAD_REQUEST)
+        if toy_serializer.is_valid():
+            toy_serializer.save()
+            return JSONResponse(toy_serializer.data, \
+            status=status.HTTP_201_CREATED)
+        return JSONResponse(toy_serializer.errors, \
+        status=status.HTTP_400_BAD_REQUEST)
 
 
 @csrf_exempt
