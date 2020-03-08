@@ -9,6 +9,7 @@ verify_ssl = true
 django = "==1.11.5"
 djangorestframework = "==3.6.4"
 httpie = "*"
+django-filter = "*"
 
 [requires]
 python_version = "3.6"
