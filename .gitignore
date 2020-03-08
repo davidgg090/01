@@ -2,5 +2,4 @@
 */migrations
 */local_settings.py
 .vscode
-Pipfile.lock
-*.lock
+
