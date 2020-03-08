@@ -48,7 +48,7 @@ class DroneCategoryTests(APITestCase):
         self.post_drone_category(drone_category_name1)
         drone_caregory_name2 = 'Octocopter'
         self.post_drone_category(drone_caregory_name2)
-        filter_by_name = { 'name' : drone_category_name1 }
+        filter_by_name = {'name': drone_category_name1}
         url = '{0}?{1}'.format(
             reverse(views.DroneCategoryList.name),
             urlencode(filter_by_name))
@@ -118,7 +118,7 @@ class PilotTests(APITestCase):
 
     def create_user_and_set_token_credentials(self):
         user = User.objects.create_user(
-        'user01', 'user01@example.com', 'user01P4ssw0rD')
+            'user01', 'user01@example.com', 'user01P4ssw0rD')
         token = Token.objects.create(user=user)
         self.client.credentials(
             HTTP_AUTHORIZATION='Token {0}'.format(token.key))
