@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     # Django Rest Framework
     'rest_framework',
+    # Django Filters
+    'django_filters',
 
     # Toys app
     'toys.apps.ToysConfig',
@@ -91,7 +93,12 @@ DATABASES = {
 
 REST_FRAMEWORK = {
     'DEFAUTL_PAGINATIONS_CLASS': 'drones.pagination.LimitOffsetPaginationWithUpperBound',
-    'PAGE_SIZE': 4
+    'PAGE_SIZE': 4,
+    'DEFAULT_FILTER_BACKENDS':(
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.OrderingFilter',
+        'rest_framework.filters.SearchFilter',
+    ),
 }
 
 # Password validation
