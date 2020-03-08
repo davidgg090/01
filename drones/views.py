@@ -14,7 +14,7 @@ class DroneCategoryList(generics.ListCreateAPIView):
     queryset = DroneCategory.objects.all()
     serializer_class = DroneCategorySerializer
     name = 'dronecategory-list'
-    filter_fields = ('name',)
+    filterset_fields  = ('name',)
     search_fields = ('^name',)
     ordering_fields = ('name',)
 
