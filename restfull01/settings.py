@@ -90,7 +90,7 @@ DATABASES = {
 }
 
 REST_FRAMEWORK = {
-    'DEFAUTL_PAGINATIONS_CLASS': 'rest_framework.pagination.LimiOffsetPagination',
+    'DEFAUTL_PAGINATIONS_CLASS': 'drones.pagination.LimitOffsetPaginationWithUpperBound',
     'PAGE_SIZE': 4
 }
 
