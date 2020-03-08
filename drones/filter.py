@@ -1,8 +1,8 @@
-from rest_framework import filters
+import django_filters
 from django_filters import AllValuesFilter, DateTimeFilter, NumberFilter
 from drones.models import Competition
 
-class CompetitionFilter(filters.FilterSet):
+class CompetitionFilter(django_filters.FilterSet):
     from_achievement_date = DateTimeFilter(name='distance_achievement_date', lookup_expr='gte')
     to_achievement_date = DateTimeFilter(name='distance_achievement_date', lookup_expr='lte')
     min_distance_in_feet = NumberFilter(name='distance_in_feet', lookup_expr='gte')

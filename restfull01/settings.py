@@ -94,7 +94,7 @@ DATABASES = {
 }
 
 REST_FRAMEWORK = {
-    'DEFAUTL_PAGINATIONS_CLASS': 'drones.pagination.LimitOffsetPaginationWithUpperBound',
+    'DEFAULT_PAGINATION_CLASS': 'drones.pagination.LimitOffsetPaginationWithUpperBound',
     'PAGE_SIZE': 4,
     'DEFAULT_FILTER_BACKENDS':(
         'django_filters.rest_framework.DjangoFilterBackend',
