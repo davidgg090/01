@@ -1,9 +1,9 @@
 {
     "_meta": {
         "hash": {
-            dependabot/pip/django-1.11.28
-              "sha256": "f35bd6804c1eb34f4fe9a13e3a8ab610b0eb75c019c4e0dfe8e75a87c825fb15"
-              "sha256": "e1a895fe87d6d662a3e0d60a6c070dce14b66ead1bee52402ab8b8adf8080a96"
+        dependabot/pip/master/djangorestframework-3.11.0
+            "sha256": "7c1a2b85fc83c1c4e211bb7b92b49242e1c114e87eeea871e4215d8e74a9ab30"
+
         },
         "pipfile-spec": 6,
         "requires": {
@@ -50,11 +50,13 @@
         },
         "djangorestframework": {
             "hashes": [
-                "sha256:79c6efbb2514bc50cf25906d7c0a5cfead714c7af667ff4bd110312cd380ae66",
-                "sha256:a4138613b67e3a223be6c97f53b13d759c5b90d2b433bad670b8ebf95402075f"
+
+                "sha256:05809fc66e1c997fd9a32ea5730d9f4ba28b109b9da71fccfa5ff241201fd0a4",
+                "sha256:e782087823c47a26826ee5b6fa0c542968219263fb3976ec3c31edab23a4001f"
             ],
             "index": "pypi",
-            "version": "==3.9.1"
+            "version": "==3.11.0"
+
         },
         "httpie": {
             "hashes": [
