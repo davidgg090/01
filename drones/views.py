@@ -1,6 +1,8 @@
 from rest_framework import generics, permissions
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authentication import TokenAuthentication
 from drones.models import DroneCategory, Drone, Pilot, Competition
 from drones.serializers import DroneCategorySerializer, DroneSerializer, PilotSerializer, PilotCompetitionSerializer
 from drones.filter import CompetitionFilter
@@ -48,6 +50,7 @@ class DroneDetail(generics.RetrieveUpdateDestroyAPIView):
         IsCurrentUserOwnerOrReadOnly,
     )
 
+
 class PilotList(generics.ListCreateAPIView):
     queryset = Pilot.objects.all()
     serializer_class = PilotSerializer
@@ -64,12 +67,24 @@ class PilotList(generics.ListCreateAPIView):
         'name',
         'races_count'
     )
+    authentication_classes = (
+        TokenAuthentication,
+    )
+    permission_classes = (
+        IsAuthenticated,
+    )
 
 
 class PilotDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Pilot.objects.all()
     serializer_class = PilotSerializer
     name = 'pilot-detail'
+    authentication_classes = (
+        TokenAuthentication,
+    )
+    permission_classes = (
+        IsAuthenticated,
+    )
 
 
 class CompetitionList(generics.ListCreateAPIView):
@@ -83,12 +98,14 @@ class CompetitionDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PilotCompetitionSerializer
     name = 'competition-detail'
     filter_class = CompetitionFilter
-    ordering_fields = ('distance_in_feet','distance_achievement_date',)
+    ordering_fields = ('distance_in_feet', 'distance_achievement_date',)
+
 
 class ApiRoot(generics.GenericAPIView):
     name = 'api-root'
 
-    def get(self, request, *args, **kwargs):
+    @classmethod
+    def get(cls, request, *args, **kwargs):
         return Response({
             'drone-categories': reverse(DroneCategoryList.name, request=request),
             'drones': reverse(DroneList.name, request=request),
