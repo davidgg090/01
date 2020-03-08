@@ -43,6 +43,9 @@ INSTALLED_APPS = [
 
     # Toys app
     'toys.apps.ToysConfig',
+
+    # Drones App
+    'drones.apps.DronesConfig',
 ]
 
 MIDDLEWARE = [
