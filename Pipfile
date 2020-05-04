@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "==1.11.28"
+django = "==3.0.6"
 djangorestframework = ">=3.9.1"
 django-filter = "*"
 pytest = "*"
